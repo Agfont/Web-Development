@@ -1,0 +1,19 @@
+SELECT DISTINCT c.name
+FROM `courses` c 
+JOIN `grades` g ON g.course_id = c.id 
+JOIN `students` s ON g.student_id = s.id
+WHERE s.name = 'Bart' OR s.name = 'Lisa';
+
+SELECT DISTINCT t.name
+FROM `courses` c 
+JOIN `grades` g ON g.course_id = c.id 
+JOIN `students` s ON g.student_id = s.id
+JOIN `teachers` t ON c.teacher_id = t.id
+WHERE s.name = 'Bart';
+
+SELECT DISTINCT s.name
+FROM `courses` c 
+JOIN `grades` g ON g.course_id = c.id 
+JOIN `teachers` t ON c.teacher_id = t.id
+JOIN `students` s ON g.student_id = s.id
+WHERE t.name = "Krabappel";

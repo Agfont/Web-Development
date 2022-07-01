@@ -1,0 +1,9 @@
+.highlighted {
+    background-color: #563;
+    border-color: 1px solid #967;
+}
+
+.highlighted .price {
+    display: block;
+}
+

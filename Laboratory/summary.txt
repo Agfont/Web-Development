@@ -1,0 +1,22 @@
+---------- P1 (T1) ----------
+1. HTML + CSS
+2. HTML + CSS (Bootstrap)
+---------- P2 (T2 y T3) ----------
+1. PHP, POST/GET (form action)
+2. SQL
+---------- P3 (T4 y T5) ----------
+1. JS, Prototype (observe, onload) + Scriptaculous (efectos)
+2. Ajax XMLHttpRequest() + AjaxRequest 
+---------- P4 (T6, T7 y T8) ----------
+1. jQuery (on, ready) + jQueryUI (show, effect, addClass)
+2. JSON search_results.php
+3. XML getbyenv.php gethint.php str_replace (< > & ' " pag11)
+
+--------------------------------------------
+Path: xampp/htdocs/COW/P1/
+https://cssgradient.io/
+https://www.w3schools.com/css/
+Sitios web de validación 
+Validador HTML: https://validator.w3.org/
+Validador CSS: https://jigsaw.w3.org/css-validator/
+<!-- Comments here -->

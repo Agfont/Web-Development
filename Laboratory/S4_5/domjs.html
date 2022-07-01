@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script src="externo.js" type="text/javascript"></script>
+</head>
+<body>
+	<script>alert("Dialog alert!");</script>
+	<button onclick="changeText();">Change text clicking me!</button>
+	<input id="output" type="text" value="replace me" />
+
+	<!-- DOM propiedades de objetos -->
+	<div id="main" class="foo bar">
+		<p>See our <a href="sale.html" id="saleslink">Sales</a>today!</p>
+	</div>
+	<script type="text/javascript">
+		var mainDiv = document.getElementById("main");
+		var icon = document.getElementById("icon");
+		var theLink = document.getElementById("saleslink");
+		document.write("----- DOM propiedades de objetos -----<br>");
+		document.write(mainDiv.tagName + "<br>");
+		document.write(mainDiv.className + "<br>");
+		document.write(icon + "<br>");
+		document.write(theLink.href  + "<br>");
+	</script>
+
+	<!-- DOM propiedades del formulario -->
+	<input id="sid" type="text" size="7" value="Messi" maxlength="7" />
+	<input id="frosh" type="checkbox" checked/> Freshman?
+	<script>
+		var sid = document.getElementById("sid");
+		var frosh = document.getElementById("frosh");
+		document.write("<br>----- DOM propiedades del formulario -----<br>");
+		document.write(sid.value + "<br>");
+		document.write(frosh.checked + "<br>");
+	</script>
+
+	<button onclick="addText();">Add text clicking here!</button>
+	<span id="output2">Hola </span>
+
+	<!-- Color -->
+	<br>
+	<button id="clickme" onclick="changeColor();">Color Me</button>
+	<script>
+	function changeColor() {
+		var clickMe = document.getElementById("clickme");
+		clickMe.style.color = "red";
+	};
+
+	</script>
+	<!-- Popup example -->
+	<script>
+			window.open("http://example.com/bar.html", 'mi ventana de ejemplo', "width=900,height=600,scrollbars=1");
+	</script>
+	<!-- Objectos globales del DOM -->
+	<script>
+		document.write("<br>----- Objectos globales del DOM -----<br>");
+		document.write("history: " + history + "<br>");
+		document.write("Navigator.appName: " + navigator.appName);
+	</script>
+
+	<!-- Posicionamiento y eventos del mouse -->
+	<p id="pos_mouse"></p>
+	<pre id="target">pasa el mouse sobre esta zona!</pre>
+	<script>
+	document.getElementById("pos_mouse").innerHTML = "---- Posicionamiento mouse -----<br>"
+	var target = document.getElementById("target");
+	target.onmousemove = target.onmousedown = showCoords;
+
+	function showCoords(event) {
+		document.getElementById("target").innerHTML = "screen : (" + event.screenX + ", " + event.screenY + ")\n"
+		+ "client : (" + event.clientX + ", " + event.clientY + ")\n"
+		+ "button : " + event.button;
+	}
+	</script>
+
+	<!-- Eventos de texto -->
+	<input id="textbox" type="text"/>
+	<script>
+	document.getElementById("textbox").onkeydown = textKeyDown; // only knows which key, not output
+	function textKeyDown(event) {
+		// var key = String.fromCharCode(event.keyCode); onkeypress
+		if (event.altKey) {
+			alert("Save the document!");
+			this.value = this.value.split("").join("-");
+		}
+	}
+	</script>
+
+	<!-- Eventos de un form -->
+	<script>
+		document.write("<br>----- Eventos de un form (Press Alt key on form)-----<br>");
+	</script>
+	<form id="exampleform" action="http://foo.com/foo.php">
+		<input type="text" id="state" >
+	</form>
+	<script>
+	var form = document.getElementById("exampleform");
+	form.onsubmit = checkData; // Evento
+
+	function checkData(event) {
+		if (document.getElementById("state").length != 2) {
+			alert("Error, invalid city/state."); // show error message
+			event.preventDefault();
+			return false;
+			// stop form submission
+		}
+	}
+	</script>
+
+	<!-- Listener -->
+	<p id="listener_out"></p>
+	<button id="mybutton">Button and Listener F1 y F2</button>
+	<script>
+		document.getElementById("listener_out").innerHTML = "---- Listener -----<br>"
+		var button = document.getElementById("mybutton");
+		button.addEventListener("click", func1);
+		button.addEventListener("click", func2);
+		function func1() {
+			console.log("F1 Handler");
+		};
+		function func2() {
+			console.log("F2 Handler");
+		};
+	</script>
+</body>
+</html>

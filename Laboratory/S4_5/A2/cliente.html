@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Important: PHP only recognizes CSS files if they are inside of css/ -->
+    <link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.1.0/prototype.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/scriptaculous/1.9.0/scriptaculous.js"></script>
+    <script src="pageload.js"></script>
+    <script src="search_hint.js"></script>
+	<title>Nexthouse</title>
+	</head>
+<body>
+    <nav class="navbar bg-primary justify-content-between text-white">
+        <a href="cliente.html">
+            <img src="next.png">
+        </a>
+        <h3>Welcome to Nexthouse, we hope you find yours!</h3>
+        <a class="btn btn-outline-light" type="button" href="sign_up.html">Sign up</a>
+    </nav>
+	<div class="container-fluid">
+        <div class="row destFinder my-3 mx-1 p-3">
+            <form id="search_form" action="http://localhost/COW/S4_5/A2/search_results.php" method="POST">
+                <div class="form-row align-items-center">
+                    <div class="col form-group">
+                        <label for="destination">Destination</label>
+                        <input list="destlist" type="text" name="destination" id="destination" 
+                        placeholder="e.g. Barcelona" size="20" minlength="1" maxlength="20">
+                    </div>
+                    <div class="col form-group">
+                        <label for="checkin">Check-in</label>
+                        <input type="date" name="checkin" id="checkin" value="2022-12-25">
+                    </div>
+                    <div class="col form-group">
+                        <label for="checkout">Checkout</label>
+                        <input type="date" name="checkout" id="checkout" value="2022-12-31">
+                    </div>
+                    <div class="col form-group">
+                        <label for="guests">Guests</label><br>
+                        <input type="number" name="guests" min="1" max="20" id="guests" value="1">
+                    </div>
+                    <div class="col form-group mt-2">
+                        <br>
+                        <input type="submit" id="search_button" value="Search">
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row text-center bg-light">
+            <!-- Environment list -->
+            <div class="env_div col-sm-2 mt-3 mb-3">
+                <h4 id="env_header">Environments</h4>
+                <div id="envs_list" class="list-group">
+                </div>
+            </div>
+            <div id="center_body" class="text-center col-sm-8 mt-3 mb-3">
+                <h4 id="center_header">Choose a environment you would like to visit!</h4>
+
+            </div>
+            <!-- Countries list -->
+            <div class="countries_div col-sm-2 mt-3 mb-3">
+                <h5>Learn more about our destination countries!</h5>
+                <div id="countries_list" class="list-group">
+                </div>
+            </div>
+        </div>
+        <div class="row text-center bg-light">
+            <img src="banner.jpg" class="img-thumbnail">
+        </div>
+        <div class="m-1">
+            <h6>&#x00AE 2022 Nexthouse, Inc.</h6>
+        </div>
+    </div>
+</body>
+</html>

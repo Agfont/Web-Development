@@ -1,0 +1,91 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	color: #959595;
+	font: normal 12px/1.8em
+	Arial, Helvetica, sansserif;
+	background: silver;
+}
+
+.MainBody
+{
+	width: 770px;
+	margin: 0 auto;
+	padding: 0px;
+}
+
+.header
+{
+	background-color: #6cc3ff;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: White;
+	margin: 0px;
+	padding: 0px;
+	width: auto;
+}
+
+.header h3
+{
+	font-size: 30px;
+	line-height: 40px;
+}
+
+.left
+{
+	width: 150px;
+	height: 500px;
+	margin: 0px;
+	padding: 0px;
+	background-color:#cce5f6;
+	float: left;
+	text-align: center;
+	color: black;
+}
+
+.left h4
+{
+	font-size: 20px;
+	color: Navy;
+	margin-top: 40px;
+}
+
+#destinations_list
+{
+	margin-left: -20px;
+}
+
+.center
+{
+	width: 420px;
+	background-color: White;
+	margin-top: -16.1px;
+	margin-left: 150px;
+	padding: 0px;
+	height: 500px;
+	text-align: center;
+}
+
+.center h1
+{
+	color: Navy;
+	padding: 250 0 0 0;
+	vertical-align: bottom;
+	line-height: 100px;
+}
+
+.right
+{
+	width: 200px;
+	height: 500px;
+	background-color: #fad695;
+	float: right;
+	margin-top: -500px;
+	margin-left: 0px;
+	padding: 0px;
+	color: Navy;
+	text-align: center;
+}

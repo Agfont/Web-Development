@@ -1,0 +1,121 @@
+body
+{
+	margin: 0px;
+    padding: 0px;
+    width: 100%;
+	color: black;
+	font: normal 12px/1.8em
+	Arial, Helvetica, sansserif;
+	background: white;
+}
+
+.MainBody
+{
+	width: auto;
+    margin: 0 auto;
+	margin-top: -30px;
+	padding: 0px;
+    background-color: silver;
+}
+
+.header
+{
+	background-color: #6cc3ff;
+	height: 50px;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+    width: auto;
+}
+
+.header h3
+{
+	font-size: 30px;
+	line-height: 50px;
+}
+
+.left
+{
+	width: 200px;
+	height: 500px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #cce5f6;
+	float: left;
+	text-align: center;
+	color: black;
+    font-size: 14px;
+}
+
+.left h4
+{
+	font-size: 20px;
+	color: Navy;
+	margin-top: 20px;
+}
+
+#countries_list
+{
+    list-style-type:disc;
+}
+
+.center
+{
+	width: 1150px;
+	background-color: white;
+	margin-top: -16.1px;
+	padding: 0px;
+	height: 500px;
+    text-align: center;
+}
+
+.center h1
+{
+	color: Navy;
+	line-height: 60px;
+}
+
+#banner_img {
+    width: 1350px; 
+    height: 500px;
+    margin-left: -1px;
+}
+
+.right
+{
+	width: 250px;
+	height: 500px;
+	background-color: #fad695;
+	float: right;
+	margin-top: -500px;
+    margin-left: 0px;
+	color: Navy;
+	text-align: center;
+}
+
+.right h4
+{
+	font-size: 20px;
+	color: Navy;
+	margin-top: 20px;
+}
+
+#hotel_img {
+    width: 250px; 
+    height: auto;
+}
+
+#cities_table
+{
+     border: 1px solid black;
+     margin-top: 20px;
+     margin-left: 45px;
+     padding: 5px;
+}
+
+.footer
+{
+    margin-top: 500px;
+	background-color: white;
+    font-size: 14px;
+}

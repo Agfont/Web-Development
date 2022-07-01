@@ -1,0 +1,14 @@
+03_1. Diapositiva 9
+Poner tablas en
+xampp/mysql/data
+sudo /opt/lampp/lampp start
+
+localhost/COW/exp_cliente.html
+------------------ P2_1 ---------------------------
+localhost/COW/S2_3/A1/cliente.php
+------------------ P2_2 ---------------------------
+localhost/COW/S2_3/A2/cliente.php
+------------------- P3 -------------------------------
+localhost/COW/S4_5/A2/cliente.html
+------------------- P4 -------------------------------
+localhost/COW/S6_7_8/A1/cliente.html

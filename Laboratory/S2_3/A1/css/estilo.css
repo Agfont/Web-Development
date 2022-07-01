@@ -1,0 +1,22 @@
+.menu {
+	color: Navy;
+}
+
+.destFinder {
+	color: white;
+	background-color: #f2826c;
+	border-radius: 16px;
+}
+
+.response {
+	color: white;
+	background-color: #f2826c;
+	border-radius: 16px;
+}
+
+#search_button {
+	background: transparent;
+	color: white;
+	border-style: ridge;
+	border-color: white;
+}

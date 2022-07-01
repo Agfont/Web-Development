@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="//code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+	<link href="application.css" rel="stylesheet" type="text/css"/>
+	<title>jQuery Adventures</title>
+</head>
+<body>
+	<h1>Where do you want to go?</h1>
+	<p>Plan your next adventure.</p>
+	<ul style="display:none;" id="destinations">
+		<li>Rome</li>
+		<li> France
+			<ul id="france">
+			<li>Paris</li>
+			</ul>
+		</li>			
+		<li class='promo'>Rio</li>
+	</ul>
+
+	<script>
+		document.write("------- Cambiar elementos -------- <br>");
+		document.write("('h1').text(): " + $("h1").text() + "<br>"); // innerText
+		$("h1").text("Where to?"); //  innerText
+		// $("li").text("Orlando"); // Set all li tags
+		
+		document.write("------- Seleccionar elementos -------- <br>");
+		// Get array of elements by id $("#destinations")
+		document.write("$('#destinations')[0].innerText: " + $("#destinations")[0].innerText + "<br>");
+		// Get array of elements by class
+		document.write("$('.promo')[0].innerHTML: " + $(".promo")[0].innerHTML + "<br>");
+
+		document.write("------- Seleccionar elementos li ul -------- <br>");
+		document.write("Len li: " + $("#destinations li").length + "<br>"); // Get all descendents
+		document.write("Len > li: " + $("#destinations > li").length + "<br>"); // Get direct descendents (#dest).children("li");
+		console.log($(".promo, #france")); // Hybrid selection
+
+		document.write("------- Seleccionar por filtros -------- <br>");
+		// Selecciones y filtros
+		document.write("$('#destinations li:first')[0].innerHTML: " + $("#destinations li:first")[0].innerHTML + "<br>");
+		document.write("$('#destinations li).first().parent()[0].innerText: " + $("#destinations li").first().parent()[0].innerText + "<br>");
+		// .next(), .prev()
+		document.write("li.first().parent()[0].id: " + $("#destinations li").first().parent()[0].id + "<br>");
+	</script>
+	<p>-------- Añadir elementos, on click --------</p>
+	<h4>Hawai Palace</h4>
+	<div class="vacation" data-price='399.99'>
+		<button id="btn0">Get Price</button><br>
+		<button id="btn1">Tickets (slideToggle = slideDown + sildeUp)</button>
+		<p class="ticket"> 
+			Tickets:
+			<input type='number' class='quantity' value='1' />
+		</p>
+		<p>Total Price: $<span id='total'>399.99</span></p>
+	</div>
+	
+	<script>
+		jQuery(document).ready(function($) {
+			$('#btn0').on('click', function() {
+				var price = $("<p>From $399.99</p>");
+				$(this).after(price); // .appendTo(), prependTo(), insertAfter(), insertBefore()
+				$(this).remove(); 
+			});
+			$('.vacation').on('click', '#btn1', function() {
+				// this is button
+				$(this).parent().toggleClass('highlighted');
+				$(this).closest('.vacation').find('.ticket').slideToggle(); // closest search up
+			})
+			// Calculate price
+			$('.vacation').on('keyup', '.quantity', function() {
+				var price = +$(this).closest('.vacation').data('price'); // + convert str to int
+				var quantity = +$(this).val(); // .val() = DOM .value
+				$('#total').text(price * quantity);
+			});
+		});
+	</script>
+	<button id="btnext">Get External Content</button>
+	<div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+	
+	<script>
+	jQuery(document).ready(function($){
+		$("#btnext").click(function(){
+			$("#div1").load("application.css", function(responseTxt,statusTxt,xhr) {
+				if(statusTxt=="success")
+					alert("External content loaded successfully!");
+				if(statusTxt=="error")
+					alert("Error: "+xhr.status+": "+xhr.statusText);
+			});
+		});
+	});
+	</script>
+</body>
+</html>

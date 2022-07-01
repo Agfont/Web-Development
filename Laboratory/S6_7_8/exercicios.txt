@@ -1,0 +1,24 @@
+----- Apartado 1 ----- 
+- page_load.js
+.ready()
+effects: line 3
+submit handler line 10
+onClick to all <a> tags (selector)
+$("") tag, $(".") class, $("#id")
+navegación y filtros: .find() children() .val() .text()
+añadir/eliminar dinam al DOM: after( prepend( append( remove( empty(
+
+GETs and POST search_results.php
+jQuery UI: spinner, datepicker, autocomplete
+
+- page sign_up.js
+POST new_user.php
+.val() .addClass() .prepend() .hide()
+----- Apartado 2 ----- 
+JSON search_results.php
+JSON page_load.js (POST)
+
+----- Apartado 3 -----
+XML getbyenv.php
+XML gethint.php
+XML page_load.js (GET)
